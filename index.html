@@ -1,311 +1,396 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mediaqueries.css">
-</head>
-<body>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Hafsa Rakkaz</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+
+  <body>
+    <!-- NAV DESKTOP -->
     <nav id="desktop-nav">
-        <div class="logo">Hafsa Rakkaz</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">À Propos </a></li>
-                <li><a href="#experience">Compétences </a></li>
-                <li><a href="#projects">Projets </a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div> 
+      <div class="logo">Hafsa Rakkaz</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#experience">Compétences</a></li>
+          <li><a href="#projects">Projets</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </nav>
+
+    <!-- NAV MOBILE -->
     <nav id="hamburger-nav">
-        <div class="logo">Hafsa Rakkaz</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">A Propos </a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Expériences</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projets</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-
-            </div>
+      <div class="logo">Hafsa Rakkaz</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
         </div>
+        <ul class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">À propos</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Compétences</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projets</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+      </div>
     </nav>
+
+    <!-- HERO / PROFILE -->
     <section id="profile">
-        <div class="section__pic-container">
-            <img src="./assets/Photo_professionnel-modified.png" alt="Profile Picture">
+      <div class="section__pic-container">
+        <img src="./assets/Photo_professionnel-modified.png" alt="Photo de profil Hafsa Rakkaz" />
+      </div>
+
+      <div class="section__text">
+        <p class="section__text__p1">Bonjour, je suis</p>
+        <h1 class="title">Hafsa Rakkaz</h1>
+        <p class="section__text__p2">Étudiante en cybersécurité </p>
+
+        <div class="btn-container">
+          <!-- Astuce: renomme ton PDF sans espaces: assets/Hafsa_Rakkaz_CV.pdf -->
+          <button class="btn btn-color-2" onclick="window.open('./assets/Hafsa Rakkaz CV.pdf')">
+            Ouvrir CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">Me contacter</button>
         </div>
-        <div class="section__text">
-            <p class="section__text__p1">Bonjour, je suis</p>
-            <h1 class="title">Hafsa Rakkaz</h1>
-            <p class="section__text__p2">Etudiante en  génie informatique</p>
-            <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('./assets/Rakkaz_Hafsa_CV (4).pdf')">Ouvrir CV</button>
-                <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
-            </div>
-            <div id="socials-containers">
-                <img src="./assets/linkedin.png" alt="Mon LinkedIn profile" class="icon" onclick="location.href='https://www.linkedin.com/in/hafsa-rakkaz-519a232a6/'">
-                <img src="./assets/github.png" alt="Mon Github profile" class="icon" onclick="location.href='https://github.com/hrakkaz'">
+
+        <div id="socials-containers">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/hafsa-rakkaz-519a232a6/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="GitHub"
+            class="icon"
+            onclick="location.href='https://github.com/hrakkaz'"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <p class="section__text__p1">En savoir plus</p>
+      <h1 class="title">À propos de moi</h1>
+
+      <div class="section-container">
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container1">
+              <img src="./assets/experience.png" alt="Icône expérience" class="icon" />
+              <h3>Expériences</h3>
+              <p>
+                Alternance – Cheffe de projet numérique (Hôtel de Région Pays de la Loire)<br />
+                Hackathon cybersécurité ESGI x Softeam (1ʳᵉ place)<br />
+                Stage Support IT – LEAR (Maroc)<br />
+                Stage Développement Web – International Paper (Maroc)
+              </p>
             </div>
 
-        </div>
-    </section>
-    <section id="about">
-        <p class="section__text__p1">En savoir plus</p>
-        <h1 class="title">À propos de moi  </h1>
-        <div class="section-container">
-            <div class="about-details-container">
-                <div class="about-containers">
-                    <div class="details-container1">
-                        <img src="./assets/experience.png" alt="experience icon" class="icon">
-                        <h3>Expériences</h3>
-                        <p> Stage - 1mois - International Paper. </br>La Nuit de Code - 6h. </br>Hackaton - 36h.</br>Stage - 2 semaines - Fleet Power</br>Séjour linguistique en Angleterre</p>
-                    </div>
-                    <div class="details-container">
-                        <img src="./assets/education.png" alt="education icon" class="icon">
-                        <h3>Education</h3>
-                        <p>Bachelor IT à Nantes</br>Licence Pluripass à Angers</br>Baccalauréat Sc.Mathématiques Mention Très Bien au Maroc</p>
-                    </div>.
-                </div>
+            <div class="details-container">
+              <img src="./assets/education.png" alt="Icône éducation" class="icon" />
+              <h3>Formation</h3>
+              <p>
+                Bachelor Cybersécurité – ESGI Nantes (2023–2026)<br />
+                Licence PluriPass – Université d’Angers (2022–2023)<br />
+                Bac Scientifique (Sc. Mathématiques) – Mention Très Bien
+              </p>
             </div>
+          </div>
         </div>
-        <img src="./assets/arrow.png" alt="arrow-icon" class="icon arrow" onclick="location.href='./#experience'">
+      </div>
+
+      <img
+        src="./assets/arrow.png"
+        alt="Flèche"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
     </section>
+
+    <!-- EXPERIENCE / SKILLS -->
     <section id="experience">
-        <p class="section__text__p1">Découvrir mes </p>
-        <h1 class="title">Compétences </h1>
-        <div class="experience-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <h2 class="experience-sub-title">Frontend Développement </h2>
-              <div class="article-container">
-                <article>
-                  <img
-                    src="./assets/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>HTML</h3>
-                    <p>Intermédiaire</p>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>CSS</h3>
-                    <p>Intermédiaire</p>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>Material UI</h3>
-                    <p>Intermédiaire</p>
-                  </div>
-                </article>
-              </div>
+      <p class="section__text__p1">Découvrir mes</p>
+      <h1 class="title">Compétences</h1>
+
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <!-- CYBER -->
+          <div class="details-container">
+            <h2 class="experience-sub-title">Cybersécurité</h2>
+            <div class="article-container">
+              <article>
+                <img src="./assets/checkmark.png" alt="Check" class="icon" />
+                <div>
+                  <h3>Analyse de risques</h3>
+                  <p>Bases (EBIOS)</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./assets/checkmark.png" alt="Check" class="icon" />
+                <div>
+                  <h3>Réseaux</h3>
+                  <p>CCNA 1–3 (en cours)</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./assets/checkmark.png" alt="Check" class="icon" />
+                <div>
+                  <h3>Blue Team</h3>
+                  <p>IDS & monitoring (bases)</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./assets/checkmark.png" alt="Check" class="icon" />
+                <div>
+                  <h3>Systèmes</h3>
+                  <p>Linux (en cours), Windows Server</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./assets/checkmark.png" alt="Check" class="icon" />
+                <div>
+                  <h3>Sécurité appli</h3>
+                  <p>Notions OWASP</p>
+                </div>
+              </article>
             </div>
-            <div class="details-container">
-              <h2 class="experience-sub-title">Backend Développement </h2>
-              <div class="article-container">
-                <article>
-                    <img
-                      src="./assets/checkmark.png"
-                      alt="Experience icon"
-                      class="icon"
-                    />
-                    <div>
-                      <h3>JavaScript</h3>
-                      <p>Intermediate</p>
-                    </div>
-                </article>
-                <article>
-                    <img
-                      src="./assets/checkmark.png"
-                      alt="Experience icon"
-                      class="icon"
-                    />
-                    <div>
-                      <h3>PHP</h3>
-                      <p>Intermediate</p>
-                    </div>
-                </article>
-                <article>
-                    <img
-                      src="./assets/checkmark.png"
-                      alt="Experience icon"
-                      class="icon"
-                    />
-                    <div>
-                      <h3>SQL Database</h3>
-                      <p>Intermediate</p>
-                    </div>
-                </article>
-              </div>
-            </div>
-            <div class="details-container">
-              <h2 class="experience-sub-title">Développement</h2>
-              <div class="article-container">
-                <article>
-                    <img
-                      src="./assets/checkmark.png"
-                      alt="Experience icon"
-                      class="icon"
-                    />
-                    <div>
-                      <h3>Python</h3>
-                      <p>Intermediate</p>
-                    </div>
-                </article>
-                <article>
-                    <img
-                      src="./assets/checkmark.png"
-                      alt="Experience icon"
-                      class="icon"
-                    />
-                    <div>
-                      <h3>Langage C</h3>
-                      <p>Intermediate</p>
-                    </div>
-                </article>
           </div>
-        </div>
-        <img
-          src="./assets/arrow.png"
-          alt="Arrow icon"
-          class="icon arrow"
-          onclick="location.href='./#projects'"
-        />
-      </section>
-      <section id="projects">
-        <p class="section__text__p1">Parcourir mes </p>
-        <h1 class="title">Projets</h1>
-        <div class="experience-details-container">
-          <div class="about-containers">
-            <div class="project-container">
-              <div class="article-container">
-                <img
-                  src="./assets/Project1.png"
-                  alt="Project 1"
-                  class="project-img"
-                />
-              </div>
-              <h2 class="experience-sub-title project-title">Premier Projet </h2>
-              <h3 class="lil-title">Générateur de mot de passe</h3>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/hrakkaz/Generateur.git'"
-                >
-                  Github
-                </button>
-              </div>
+
+          <!-- DEV -->
+          <div class="details-container">
+            <h2 class="experience-sub-title">Développement</h2>
+            <div class="article-container">
+              <article>
+                <img src="./assets/checkmark.png" alt="Check" class="icon" />
+                <div>
+                  <h3>HTML / CSS</h3>
+                  <p>Intermédiaire</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./assets/checkmark.png" alt="Check" class="icon" />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Intermédiaire</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./assets/checkmark.png" alt="Check" class="icon" />
+                <div>
+                  <h3>PHP</h3>
+                  <p>Intermédiaire</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./assets/checkmark.png" alt="Check" class="icon" />
+                <div>
+                  <h3>SQL / MySQL</h3>
+                  <p>Intermédiaire</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./assets/checkmark.png" alt="Check" class="icon" />
+                <div>
+                  <h3>Python</h3>
+                  <p>Intermédiaire</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./assets/checkmark.png" alt="Check" class="icon" />
+                <div>
+                  <h3>C</h3>
+                  <p>Intermédiaire</p>
+                </div>
+              </article>
             </div>
-            <div class="project-container">
-              <div class="article-container">
-                <img
-                  src="./assets/Capture d'écran 2024-05-02 123234.png"
-                  alt="Project 2"
-                  class="project-img"
-                />
-              </div>
-              <h2 class="experience-sub-title project-title">Deuxième Projet </h2>
-              <h3 class="lil-title">Générateur CV</h3>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/hrakkaz/Rezume.git'"
-                >
-                  Github
-                </button>
-              </div>
-            </div>
-            <div class="project-container">
-              <div class="article-container">
-                <img
-                  src="./assets/Capture d'écran 2024-05-02 123351.png"
-                  alt="Project 3"
-                  class="project-img"
-                />
-              </div>
-              <h2 class="experience-sub-title project-title">Troisième Projet </h2>
-              <h3 class="lil-title">Réseau social artistique</h3>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/hrakkaz/Museo.git'"
-                >
-                  Github
-                </button>
-              </div>
+          </div>
+
+          <!-- GESTION / SOFT -->
+          <div class="details-container">
+            <h2 class="experience-sub-title">Gestion & communication</h2>
+            <div class="article-container">
+              <article>
+                <img src="./assets/checkmark.png" alt="Check" class="icon" />
+                <div>
+                  <h3>Coordination</h3>
+                  <p>Projets, suivi, délais</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./assets/checkmark.png" alt="Check" class="icon" />
+                <div>
+                  <h3>Documentation</h3>
+                  <p>Supports & guides</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./assets/checkmark.png" alt="Check" class="icon" />
+                <div>
+                  <h3>Animation</h3>
+                  <p>Ateliers & rendez-vous numériques</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./assets/checkmark.png" alt="Check" class="icon" />
+                <div>
+                  <h3>Travail d’équipe</h3>
+                  <p>Pluridisciplinaire</p>
+                </div>
+              </article>
             </div>
           </div>
         </div>
-        <img
-          src="./assets/arrow.png"
-          alt="Arrow icon"
-          class="icon arrow"
-          onclick="location.href='./#contact'"
-        />
-      </section>
-      <section id="contact">
-        <p class="section__text__p1">Parlons</p>
-        <h1 class="title">Contacter moi</h1>
-        <div class="contact-info-upper-container">
-          <div class="contact-info-container">
-            <img
-              src="./assets/email.png"
-              alt="Email icon"
-              class="icon contact-icon email-icon"
-            />
-            <p><a href="rakkazhafsa@gmail.com">rakkazhafsa@gmail.com</a></p>
+      </div>
+
+      <img
+        src="./assets/arrow.png"
+        alt="Flèche"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <p class="section__text__p1">Parcourir mes</p>
+      <h1 class="title">Projets</h1>
+
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <!-- Projet 1 -->
+          <div class="project-container">
+            <div class="article-container">
+              <img src="./assets/Project1.png" alt="Projet 1" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Projet 1</h2>
+            <h3 class="lil-title">Générateur de mots de passe</h3>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/hrakkaz/Generateur.git'">
+                GitHub
+              </button>
+            </div>
           </div>
-          <div class="contact-info-container">
-            <img
-              src="./assets/linkedin.png"
-              alt="LinkedIn icon"
-              class="icon contact-icon"
-            />
-            <p><a href="https://www.linkedin.com/in/hafsa-rakkaz-519a232a6/">LinkedIn</a></p>
+
+          <!-- Projet 2 -->
+          <div class="project-container">
+            <div class="article-container">
+              <img
+                src="./assets/Capture d'écran 2024-05-02 123234.png"
+                alt="Projet 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Projet 2</h2>
+            <h3 class="lil-title">Générateur de CV</h3>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/hrakkaz/Rezume.git'">
+                GitHub
+              </button>
+            </div>
           </div>
-          <div class="contact-info-container">
-            <img
-              src="./assets/phone.png"
-              alt="Phone icon"
-              class="icon contact-icon phone-icon"
-            />
-            <p><a href="0698819288">+33 6.98.81.92.88</a></p>
+
+          <!-- Projet 3 -->
+          <div class="project-container">
+            <div class="article-container">
+              <img
+                src="./assets/Capture d'écran 2024-05-02 123351.png"
+                alt="Projet 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Projet 3</h2>
+            <h3 class="lil-title">Réseau social artistique</h3>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/hrakkaz/Museo.git'">
+                GitHub
+              </button>
+            </div>
+          </div>
+
+          <!-- (Option) Ajoute un projet cyber plus tard -->
+          <!--
+          <div class="project-container">
+            <div class="article-container">
+              <img src="./assets/project-cyber.png" alt="Projet cyber" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Projet cyber</h2>
+            <h3 class="lil-title">Mini audit OWASP + rapport</h3>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/TONLIEN'">GitHub</button>
+            </div>
+          </div>
+          -->
         </div>
+      </div>
+
+      <img
+        src="./assets/arrow.png"
+        alt="Flèche"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <p class="section__text__p1">Parlons</p>
+      <h1 class="title">Contact</h1>
+
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img src="./assets/email.png" alt="Email" class="icon contact-icon email-icon" />
+          <p><a href="mailto:rakkazhafsa@gmail.com">rakkazhafsa@gmail.com</a></p>
         </div>
-      </section>
-      <footer>
-        <nav>
-          <div class="nav-links-container">
-            <ul class="nav-links">
-              <li><a href="#about"> À propos</a></li>
-              <li><a href="#experience">Compétences</a></li>
-              <li><a href="#projects">Projets</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
-        </nav>
-      </footer>
+
+        <div class="contact-info-container">
+          <img src="./assets/linkedin.png" alt="LinkedIn" class="icon contact-icon" />
+          <p>
+            <a href="https://www.linkedin.com/in/hafsa-rakkaz-519a232a6/" target="_blank" rel="noopener">
+              LinkedIn
+            </a>
+          </p>
+        </div>
+
+        <div class="contact-info-container">
+          <img src="./assets/phone.png" alt="Téléphone" class="icon contact-icon phone-icon" />
+          <p><a href="tel:+33698819288">+33 6 98 81 92 88</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#experience">Compétences</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </footer>
 
     <script src="script.js"></script>
-    
-</body>
+  </body>
 </html>
